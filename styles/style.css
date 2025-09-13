@@ -9,13 +9,15 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
-  block-size: 100%;
+  display: flex;
+  align-items: center;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Condensed', Arial, Helvetica, sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -48,4 +50,148 @@ ol {
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: auto 400px;
+  align-items: end;
+  gap: 30px;
+  max-width: 1140px;
+  max-height: 534px;
+}
+
+/* левая часть */
+
+.result__video-container {
+  position: relative;
+  max-width: 710px;
+  height: 386px;
+  margin-bottom: 16px;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.search-form__fieldset-title {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: none;
+}
+
+.search-form__textfield {
+  min-width: 225px;
+  border: 1px solid #fff;
+  border-right-width: 0;
+  border-left-width: 0;
+  color: rgb(255, 255, 255, 0.7);
+  font-family: 'Fira Sans Condensed', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  background-color: transparent;
+}
+
+.button {
+  border: 1px solid #fff;
+  padding: 6px 0;
+  color: #fff;
+  font-family: 'Fira Sans Condensed', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.search-form__submit-button {
+  min-width: 194px;
+}
+
+/* правая часть */
+
+.title {
+  margin-bottom: 26px;
+  font-family: Oswald, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list-container {
+  height: 304px;
+  padding-right: 3px;
+  overflow-y: auto;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content__card-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.content__video-card {
+  display: grid;
+  grid-template-columns: 196px 194px;
+  justify-content: space-between;
+}
+
+.content__video-card-title {
+  overflow: hidden;
+  font-family: Oswald, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+}
+
+.content__video-card-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16px;
+}
+
+.content__video-card-thumbnail {
+  width: 100%;
+  height: 103px;
+}
+
+.more-button {
+  width: 100%;
+  margin-top: 30px;
 }
